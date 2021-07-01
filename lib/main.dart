@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'Tournament.dart';
-
+import 'OpenPlay.dart';
+import 'Profile.dart';
 
 
 void main() {
-  runApp( FrontPage()
+  runApp( MaterialApp(
+    home: FrontPage()
+  )
 
-
-  );
-}
+  );}
 
 
 class FrontPage extends StatelessWidget {
@@ -33,12 +34,10 @@ class FrontPage extends StatelessWidget {
                color: Color.fromRGBO(112, 112,112, 1),
                margin: EdgeInsets.only(top:0, bottom: 10),
                child: ListTile(
-                 onTap: () {
+                 onTap:  (){
                    Navigator.push(
                      context,
-                     MaterialPageRoute(
-                       builder: (context) => Tournament(),
-                     ),
+                     MaterialPageRoute(builder: (context) => Tournament()),
                    );
                  },
                  leading: Icon(Icons.sports_volleyball,
@@ -63,8 +62,11 @@ class FrontPage extends StatelessWidget {
                margin: EdgeInsets.only(top:0, bottom: 10),
                child: ListTile(
                  onTap: () {
-                   print('button');
-                 },
+               Navigator.push(
+               context,
+               MaterialPageRoute(builder: (context) => Open()),
+               );
+               },
                  leading: Icon(Icons.lock_open_rounded,
                    color: Color.fromRGBO(230, 136, 12, 1),
                    size: 50,
@@ -80,22 +82,24 @@ class FrontPage extends StatelessWidget {
                  ),
                ),
              ),
-
              Card(
 
                color: Color.fromRGBO(112, 112,112, 1),
                margin: EdgeInsets.only(top:0, bottom: 10),
                child: ListTile(
-                 onTap: () {
-                   print('button');
+                 onTap: (){
+                   Navigator.push(
+                     context,
+                     MaterialPageRoute(builder: (context) => Profile()),
+                   );
                  },
-                 leading: Icon(Icons.calendar_today_sharp,
+                 leading: Icon(Icons.person,
                    color: Color.fromRGBO(230, 136, 12, 1),
                    size: 50,
 
                  ),
                  title: Center(
-                   child: Text('CALENDAR',
+                   child: Text('Profile',
                      style: TextStyle(
                        color: Color.fromRGBO(230, 136, 12, 1),
                        fontFamily: 'Source Sans Pro',
@@ -104,6 +108,9 @@ class FrontPage extends StatelessWidget {
                  ),
                ),
              ),
+
+
+             
 
              Card(
 
@@ -129,53 +136,9 @@ class FrontPage extends StatelessWidget {
                ),
              ),
 
-             Card(
 
-               color: Color.fromRGBO(112, 112,112, 1),
-               margin: EdgeInsets.only(top:0, bottom: 10),
-               child: ListTile(
-                 onTap: () {
-                   print('button');
-                 },
-                 leading: Icon(Icons.person_rounded,
-                   color: Color.fromRGBO(230, 136, 12, 1),
-                   size: 50,
 
-                 ),
-                 title: Center(
-                   child: Text('PROFILE',
-                     style: TextStyle(
-                       color: Color.fromRGBO(230, 136, 12, 1),
-                       fontFamily: 'Source Sans Pro',
-                       fontSize:30,),
-                   ),
-                 ),
-               ),
-             ),
 
-             Card(
-
-               color: Color.fromRGBO(112, 112,112, 1),
-               margin: EdgeInsets.only(top:0, bottom: 10),
-               child: ListTile(
-                 onTap: () {
-                   print('button');
-                 },
-                 leading: Icon(Icons.settings,
-                   color: Color.fromRGBO(230, 136, 12, 1),
-                   size: 50,
-
-                 ),
-                 title: Center(
-                   child: Text('SETTINGS',
-                     style: TextStyle(
-                       color: Color.fromRGBO(230, 136, 12, 1),
-                       fontFamily: 'Source Sans Pro',
-                       fontSize:30,),
-                   ),
-                 ),
-               ),
-             ),
 
 
 

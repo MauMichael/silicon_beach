@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'main.dart';
 
 void main() {
-  runApp( Tournament()
+  runApp( Open()
 
 
   );}
 
 
-class Tournament extends StatelessWidget {
+class Open extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -39,7 +38,7 @@ class Tournament extends StatelessWidget {
                                 'Host: Nick Tom \n'
                                 'Phone number: 310 555 9585 \n'
                                 'Email: nickTom@sample.com \n'
-                                'Link:        ',
+                                ,
                               style: TextStyle(
                                 color: Color.fromRGBO(230, 136, 12, 1),
                                 fontFamily: 'Source Sans Pro',
@@ -64,7 +63,7 @@ class Tournament extends StatelessWidget {
                                 'Host: Nick Tom \n'
                                 'Phone number: 310 555 9585 \n'
                                 'Email: nickTom@sample.com \n'
-                                'Link:',
+                                ,
                               style: TextStyle(
                                 color: Color.fromRGBO(230, 136, 12, 1),
                                 fontFamily: 'Source Sans Pro',
@@ -89,7 +88,7 @@ class Tournament extends StatelessWidget {
                                 'Host: Nick Tom \n'
                                 'Phone number: 310 555 9585 \n'
                                 'Email: nickTom@sample.com \n'
-                                'Link: ',
+                                ,
                               style: TextStyle(
                                 color: Color.fromRGBO(230, 136, 12, 1),
                                 fontFamily: 'Source Sans Pro',
